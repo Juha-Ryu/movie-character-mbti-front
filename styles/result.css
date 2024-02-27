@@ -1,0 +1,68 @@
+.result {
+  display: none;
+}
+
+h3 {
+  font-size: 25px;
+  margin: 30px;
+}
+
+.result img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.result-save {
+  font-size: 13px;
+  color: #888;
+  position: relative;
+}
+
+.result-save::after {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/down.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.result-box {
+  width: 450px;
+  margin: 50px auto;  
+  font-size: 15px;
+}
+
+.box-strong {
+  line-height: 30px;
+  background: rgba(255, 226, 152, .3);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.box-short li {
+  border: 1px solid rgba(255, 226, 152, .8);
+  padding: 30px 0;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.btn-restart {
+  width: 300px;
+  height: 50px;
+  margin: 50px auto 0px;
+  background: #000;
+  color: #fff;
+  border-radius: 100px;
+  font-size: 18px;
+}
+
+.share { margin: 30px 0; }
+
+.share p {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 10px;
+}

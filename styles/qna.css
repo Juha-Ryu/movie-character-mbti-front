@@ -1,0 +1,38 @@
+.qna {
+  display: none;
+  background-color: #FFE298;
+}
+
+.question h2 {
+  font-size: 20px;
+  height: 300px;
+  padding-top: 150px;
+  line-height: 30px;
+}
+
+.answers {
+  text-align: center;
+  height: 200px;
+  width: 100%;
+}
+
+.answers li {
+  width: 300px;
+  height: 55px;
+  background: #fff;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 10px
+}
+
+.answers li:hover {
+  background: #FFE298;
+  border: 1px solid #fff;
+}
+
+.answers li a {
+  display: block;
+  color: #000;
+  font-size: 14px;
+}
