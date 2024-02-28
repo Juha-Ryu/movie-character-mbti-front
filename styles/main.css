@@ -30,8 +30,6 @@ button {
   cursor: pointer;
 }
 
-span { display: block; }
-
 em { font-style: normal; }
 
 .hidden {
@@ -49,7 +47,12 @@ em { font-style: normal; }
   text-align: center;
 }
 
-.main { background: #000; padding-bottom: 10px; }
+.main { 
+  display: flex;
+  background: #000; 
+  padding-bottom: 10px; 
+  flex-direction: column;
+}
 
 h1 { 
   color: #D20012;
