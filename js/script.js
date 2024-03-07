@@ -15,8 +15,8 @@ startButton.addEventListener('click', start);
 
 function next(pageIdx) {
   let question = document.querySelector(".question h2");
-  let answerA = document.querySelector(".answers .a")
-  let answerB = document.querySelector(".answers .b")
+  let answerA = document.querySelector(".answers .a");
+  let answerB = document.querySelector(".answers .b");
   let page = document.querySelector("input[id='page']");
   let pageCnt = document.querySelector(".page .now");
 
@@ -67,6 +67,17 @@ function end() {
     type : "POST",
 
     success: function(data) {
+      const resultObject = result.find(obj => Object.keys(obj)[0] === data);
+
+      if (resultObject) {
+        const { h3, p } = resultObject;
+        document.querySelector(".result .result-contents h3").innerText = h3;
+        document.querySelector(".result .result-contents .box-strong").innerHTML = p;
+      } else {
+        console.log("해당하는 결과가 없습니다.");
+      }
+      
+      //이미지
       document.querySelector(".result img").src = `./img/${data}.jpeg`;
 
       document.querySelector(".result .loader").style.display = "none";

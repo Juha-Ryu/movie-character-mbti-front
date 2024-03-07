@@ -6,9 +6,14 @@
 }
 
 * {
+  font-family: 'GmarketSansMedium';
+}
+
+body {
   box-sizing: border-box;
   margin: 0;
-  font-family: 'GmarketSansMedium';
+  width: 100%;
+  height: 100vh;
 }
 
 ol, ul, li {
@@ -42,7 +47,7 @@ em { font-style: normal; }
 }
 
 .container {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
 }
