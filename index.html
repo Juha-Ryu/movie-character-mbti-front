@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/qna.css">
     <link rel="stylesheet" href="./styles/result.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
+  
   <body>
     <div class="container">
       <section class="main">
-        <h1>나에게 어울리는 <br>영화 캐릭터는?</h1>
-        <img src="./img/main.jpg" alt="메인 이미지">
+        <div class="title">
+          <img src="./img/main.jpg" alt="메인 이미지">
+          <h1>나에게 어울리는 <p>영화 캐릭터는?</p></h1>
+        </div>
         <button type="button" class="btn-start">시작하기</button>
         <p class="participants">참여자수<em class="participants-count">10</em>명</p>
         <div class="share">
@@ -61,11 +65,11 @@
       </section>
 
       <section class="result">
-        <!--<div class="loader">Loading...</div>-->
+        <div class="loader">Loading...</div>
         <div class="result-contents">
+          <p class="result-ment">나의 캐릭터는..</p>
           <h3>'친화력 갑 주인공 단짝친구 캐릭터'</h3>
-          <img src="./img/esfp.jpeg" alt="esfp">
-          <p class="result-save">이미지 꾹 눌러 결과 저장하기</p>
+          <img src="./img/ESFP.jpg" alt="esfp">
           <div class="result-box">
             <p class="box-strong">
               주로 '학원물 영화'에서 많이 등장해요.<br>

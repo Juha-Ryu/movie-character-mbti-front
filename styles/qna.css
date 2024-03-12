@@ -7,11 +7,12 @@
 .page {
   font-size: 13px;
   padding-top: 50px;
+  font-style: italic;
 }
 
 .question h2 {
   font-size: 20px;
-  padding: 120px 40px;
+  padding: 100px 40px;
   line-height: 30px;
 }
 
@@ -23,19 +24,19 @@
 
 .answers li:hover a {
   background: #FFE298;
-  border: 1px solid #fff;
+  border: 1px solid #000;
 }
 
 .answers li a {
   display: flex;
-  align-items: center; /* 세로 가운데 정렬 */
-  justify-content: center; /* 가로 가운데 정렬 */
-  width: 320px;
+  align-items: center; 
+  justify-content: center; 
+  width: 330px;
+  height: 100%;
   background: #fff;
   border-radius: 100px;
-  margin-bottom: 10px;
   color: #000;
   font-size: 13px;
   margin: 10px auto;
-  padding: 15px 0;
+  padding: 14px 0;
 }

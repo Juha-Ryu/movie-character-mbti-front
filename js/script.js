@@ -61,25 +61,24 @@ function end() {
   mbtiReset();
 
   $.ajax({
-    url : `${server}/mbti/result`,
+    url : `http://3.38.240.59:8090/mbti/result`,
     headers: {'Content-Type': 'application/json'},
     data : mbti,
     type : "POST",
 
-    success: function(data) {
-      const resultObject = result.find(obj => Object.keys(obj)[0] === data);
-
-      if (resultObject) {
-        const { h3, p } = resultObject;
+    success: function (data) {
+      const detailObject = detail.find(obj => Object.keys(obj)[0] === data);
+  
+      if (detailObject) {
+        const { h3, p } = detailObject[Object.keys(detailObject)[0]];
         document.querySelector(".result .result-contents h3").innerText = h3;
         document.querySelector(".result .result-contents .box-strong").innerHTML = p;
       } else {
         console.log("해당하는 결과가 없습니다.");
       }
-      
-      //이미지
-      document.querySelector(".result img").src = `./img/${data}.jpeg`;
-
+  
+      // 이미지 로드 완료 후 로딩 표시 숨김 및 결과 표시
+      document.querySelector(".result .result-contents img").src = `./img/${data}.jpg`;
       document.querySelector(".result .loader").style.display = "none";
       document.querySelector(".result .result-contents").style.display = "block";
     },
