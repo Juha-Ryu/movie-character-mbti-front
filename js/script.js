@@ -11,6 +11,21 @@ function start() {
   next(0);
 }
 
+// 참여자 수 반환
+$(document).ready(function() {
+  $.ajax({
+    url: `${server}/mbti/count`,  
+    headers: {'Content-Type': 'application/json'},
+    method: "GET",
+    success: function(data) {
+        $(".participants-count").text(data.participantCount);
+    },
+    error: function(xhr, status, error) {
+        console.error("AJAX 요청 실패:", error);
+    }
+  });
+});
+
 startButton.addEventListener('click', start);
 
 function next(pageIdx) {
@@ -60,11 +75,12 @@ function end() {
 
   mbtiReset();
 
+  // mbti 결과 반환
   $.ajax({
     url : `http://3.38.240.59:8090/mbti/result`,
     headers: {'Content-Type': 'application/json'},
     data : mbti,
-    type : "POST",
+    method : "POST",
 
     success: function (data) {
       const detailObject = detail.find(obj => Object.keys(obj)[0] === data);
