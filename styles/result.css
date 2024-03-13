@@ -79,26 +79,54 @@ h3 {
 .result img {
   width: 100%;
   height: 500px;
-  margin: 0 auto;
+  margin: 25px auto;
 }
 
 .result-box {
   width: 500px;
   margin: 0px auto;  
-  font-size: 15px;
+  font-size: 13px;
 }
 
-.box-strong {
-  line-height: 30px;
+.result-strong {
+  line-height: 25px;
   background: rgba(255, 226, 152, .3);
   border-radius: 10px;
   padding: 20px;
 }
 
-.box-short li {
+.result-desc {
+  margin-top: 15px;
+  line-height: 30px;
+  background: rgba(185, 224, 255, .4);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.result-desc li {
+  line-height: 25px;
+  text-align: left;
+}
+
+.result-desc li::before {
+  content: '✔️';
+  width: 10px;
+  height: 10px;
+  margin-right: 12px;
+}
+
+.result-fit {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.result-fit li {
+  width: 100%;
   border: 1px solid rgba(255, 226, 152, .8);
-  padding: 30px 0;
-  margin-top: 20px;
+  padding: 10px;
+  margin-right: 5px;
   border-radius: 20px;
 }
 
@@ -112,10 +140,17 @@ h3 {
   font-size: 18px;
 }
 
-.share { margin: 30px 0; }
+.result-share { margin: 60px 0; }
 
-.share p {
+.result-share p {
   color: #000;
   font-size: 18px;
-  margin-bottom: 10px;
+}
+
+.result-share-list li { display: inline-block; }
+
+.result-share-list li img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
 }

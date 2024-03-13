@@ -77,7 +77,7 @@ function end() {
 
   // mbti 결과 반환
   $.ajax({
-    url : `http://3.38.240.59:8090/mbti/result`,
+    url : `${server}/mbti/result`,
     headers: {'Content-Type': 'application/json'},
     data : mbti,
     method : "POST",
@@ -87,8 +87,19 @@ function end() {
   
       if (detailObject) {
         const { h3, p } = detailObject[Object.keys(detailObject)[0]];
+        const resultDesc = detailObject[Object.keys(detailObject)[0]].resultDesc;
+
         document.querySelector(".result .result-contents h3").innerText = h3;
-        document.querySelector(".result .result-contents .box-strong").innerHTML = p;
+        document.querySelector(".result .result-contents .result-strong").innerHTML = p;
+
+        const ulResultDesc = document.querySelector(".result .result-contents .result-desc");
+        ulResultDesc.innerHTML = ""; 
+
+        resultDesc.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          ulResultDesc.appendChild(li);
+        });
       } else {
         console.log("해당하는 결과가 없습니다.");
       }
