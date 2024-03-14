@@ -5,9 +5,7 @@
   font-style: normal;
 }
 
-* {
-  font-family: 'GmarketSansMedium';
-}
+* { font-family: 'GmarketSansMedium'; }
 
 body {
   box-sizing: border-box;
@@ -30,10 +28,7 @@ button, img { border: 0; }
 
 img { width: 100%; }
 
-button { 
-  background: transparent;
-  cursor: pointer;
-}
+button { background: transparent; cursor: pointer; }
 
 em { font-style: normal; }
 
@@ -47,7 +42,7 @@ em { font-style: normal; }
 }
 
 .container {
-  max-width: 600px;
+  max-width: 767px;
   margin: 0 auto;
   text-align: center;
 }

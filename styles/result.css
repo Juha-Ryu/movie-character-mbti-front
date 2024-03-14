@@ -59,6 +59,7 @@
 
 .result {
   display: none;
+  border: 1px solid red;
 }
 
 .result-contents {
@@ -78,13 +79,13 @@ h3 {
 
 .result img {
   width: 100%;
-  height: 500px;
+  height: 50%;
   margin: 25px auto;
 }
 
 .result-box {
-  width: 500px;
-  margin: 0px auto;  
+  border: 1px solid red;
+  margin: 0px 60px;  
   font-size: 13px;
 }
 
