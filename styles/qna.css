@@ -11,9 +11,11 @@
 }
 
 .question h2 {
+  width: 450px;
   font-size: 20px;
-  padding: 100px 40px;
+  padding: 100px 0;
   line-height: 30px;
+  margin: 0 auto;
 }
 
 .answers {
@@ -26,12 +28,34 @@
   display: flex;
   align-items: center; 
   justify-content: center; 
-  width: 330px;
+  width: 450px;
   height: 100%;
   background: #fff;
   border-radius: 100px;
   color: #000;
-  font-size: 13px;
+  font-size: 15px;
   margin: 10px auto;
   padding: 14px 0;
+}
+
+@media (max-width: 767px) {
+  .page {
+    font-size: 10px;
+    padding-top: 50px;
+    font-style: italic;
+  }
+
+  .question h2 {
+    width: 270px;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 80px 0;
+  }
+
+  .answers li a {
+    width: 270px;
+    font-size: 11px;
+    margin: 10px auto;
+    padding: 8px 0;
+  }
 }
