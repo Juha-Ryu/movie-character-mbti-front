@@ -38,7 +38,7 @@ em { font-style: normal; }
 }
 
 .container {
-  max-width: 767px;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
 }
@@ -46,7 +46,7 @@ em { font-style: normal; }
 .main { 
   background: #000; 
   padding-bottom: 15px; 
-  padding-top: 80px;
+  padding-top: 30px;
 }
 
 .title {
@@ -58,7 +58,7 @@ em { font-style: normal; }
 
 h1 { 
   color: #D56F4F;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 400;
   position: absolute;
   letter-spacing: 1px;
@@ -66,10 +66,10 @@ h1 {
 }
 
 h1 p {
-  font-size: 55px;
+  font-size: 45px;
   color: #000;
   font-weight: 800;
-  line-height: 50px;
+  line-height: 40px;
   margin-top: 15px;
   box-shadow: inset 0 -21px 0 #b9e0ff;  
 }
@@ -93,10 +93,7 @@ h1 p {
   letter-spacing: 2px;
 }
 
-.participants-count::before {
-  content: '|';
-  margin: 0 15px;
-}
+.participants-count::before { content: '|'; margin: 0 15px; }
 
 .share { margin: 60px 0; }
 
@@ -121,10 +118,7 @@ h1 p {
 @media (max-width: 767px) {
   h1 { font-size: 17px; }
   
-  h1 p {
-    font-size: 35px;
-    margin-top: 0px;
-  }
+  h1 p { font-size: 35px; margin-top: 0px; }
 
   .btn-start {
     width: 200px;
@@ -133,10 +127,7 @@ h1 p {
     font-size: 15px;
   }
 
-  .participants {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
+  .participants { font-size: 12px; letter-spacing: 1px; }
 
   .share p {
     color: #fff;

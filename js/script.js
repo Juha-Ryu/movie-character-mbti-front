@@ -2,6 +2,7 @@ const main = document.querySelector('.main');
 const qna = document.querySelector('.qna');
 const result = document.querySelector('.result');
 const startButton = document.querySelector('.btn-start');
+const restartButton = document.querySelector('.btn-restart');
 
 function start() {
   main.style.display = "none";
@@ -86,11 +87,13 @@ function end() {
       const detailObject = detail.find(obj => Object.keys(obj)[0] === data);
   
       if (detailObject) {
-        const { h3, p } = detailObject[Object.keys(detailObject)[0]];
+        const { h3, p, good, bad } = detailObject[Object.keys(detailObject)[0]];
         const resultDesc = detailObject[Object.keys(detailObject)[0]].resultDesc;
 
         document.querySelector(".result .result-contents h3").innerText = h3;
         document.querySelector(".result .result-contents .result-strong").innerHTML = p;
+        document.querySelector(".result .result-contents .result-fit .good span").innerHTML = good;
+        document.querySelector(".result .result-contents .result-fit .bad span").innerHTML = bad;
 
         const ulResultDesc = document.querySelector(".result .result-contents .result-desc");
         ulResultDesc.innerHTML = ""; 
@@ -120,10 +123,12 @@ function end() {
 }
 
 function retest() {
-  main.style.display = "flex";
+  main.style.display = "block";
   qna.style.display = "none";
   result.style.display = "none";
 }
+
+restartButton.addEventListener('click', retest);
 
 function mbtiReset() {
   document.getElementById("E").value = 0;

@@ -1,1 +1,1 @@
-const server = 'http://3.37.237.253:8090';
+const server = 'https://api.dev-suzu.click:8090';
