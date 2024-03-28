@@ -160,16 +160,16 @@ function kakaoShare() {
       title: '나에게 어울리는 영화 캐릭터는?',
       imageUrl: './img/main.jpg',
       link: {
-        mobileWebUrl: 'http://127.0.0.1:5500',
-        webUrl: 'http://127.0.0.1:5500',
+        mobileWebUrl: 'https://dev-suzu.click',
+        webUrl: 'https://dev-suzu.click',
       },
     },
     buttons: [
       {
         title: '웹으로 보기',
         link: {
-          mobileWebUrl: 'http://127.0.0.1:5500',
-          webUrl: 'http://127.0.0.1:5500',
+          mobileWebUrl: 'https://dev-suzu.click',
+          webUrl: 'https://dev-suzu.click',
         },
       },
     ],
