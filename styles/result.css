@@ -155,6 +155,8 @@ h3 {
 }
 
 @media (max-width: 767px) {
+  h3 { margin: 10px; }
+
   .result-box { font-size: 12px; }
 
   .result-strong { line-height: 20px; }
@@ -171,7 +173,7 @@ h3 {
   .result-desc li::before {
     width: 8px;
     height: 8px;
-    margin-right: 10px;
+    margin-right: 8px;
   }
 
   .result-fit { margin-top: 10px; }
