@@ -44,6 +44,7 @@ em { font-style: normal; }
 }
 
 .main { 
+  height: 100vh;
   background: #000; 
   padding-bottom: 15px; 
   padding-top: 30px;
@@ -122,9 +123,9 @@ h1 p {
 
   .btn-start {
     width: 200px;
-    height: 30px;
+    height: 50px;
     line-height: 30px;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .participants { font-size: 12px; letter-spacing: 1px; }
@@ -136,8 +137,8 @@ h1 p {
   }
 
   .share-list li button {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin-right: 5px;
   }
 }
