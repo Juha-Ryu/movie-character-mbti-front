@@ -29,6 +29,23 @@ $(document).ready(function() {
 
 startButton.addEventListener('click', start);
 
+// qna 랜덤 돌리기
+function init() {
+  shuffledQnaList = shuffleArray(qnaList); 
+  next(0); 
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+window.onload = init;
+
+// data.js 가져오기
 function next(pageIdx) {
   let question = document.querySelector(".question h2");
   let answerA = document.querySelector(".answers .a");
@@ -46,6 +63,7 @@ function next(pageIdx) {
   pageCnt.innerText = pageIdx;
 }
 
+// data.js type
 function select(type) {
   let mbtiType = document.querySelector(`.qna input[id=${type}]`);
   let pageIdx = document.querySelector("input[id='page']").value;
@@ -59,6 +77,7 @@ function select(type) {
   }
 }
 
+// json
 function end() {
   qna.style.display = "none";
   result.style.display = "block";
@@ -122,6 +141,7 @@ function end() {
   });
 }
 
+// 테스트 다시하기
 function retest() {
   main.style.display = "block";
   qna.style.display = "none";
