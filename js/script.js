@@ -140,3 +140,40 @@ function mbtiReset() {
   document.getElementById("P").value = 0;
   document.getElementById("J").value = 0;
 }
+
+// 링크 복사
+async function onClickCopyLink() {
+  const link = window.location.href;
+  await navigator.clipboard.writeText(link);
+  window.alert('링크가 복사되었습니다.')
+}
+
+// 카카오톡 공유
+Kakao.init('e03007817ef0e47b7c1ee1c73847a70e');
+
+console.log(Kakao.isInitialized());
+
+function kakaoShare() {
+  Kakao.Link.sendDefault({
+    objectType: 'feed',
+    content: {
+      title: '나에게 어울리는 영화 캐릭터는?',
+      imageUrl: './img/main.jpg',
+      link: {
+        mobileWebUrl: 'http://127.0.0.1:5500',
+        webUrl: 'http://127.0.0.1:5500',
+      },
+    },
+    buttons: [
+      {
+        title: '웹으로 보기',
+        link: {
+          mobileWebUrl: 'http://127.0.0.1:5500',
+          webUrl: 'http://127.0.0.1:5500',
+        },
+      },
+    ],
+    // 카카오톡 미설치 시 카카오톡 설치 경로이동
+    installTalk: true,
+  })
+}

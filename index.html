@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/qna.css">
     <link rel="stylesheet" href="./styles/result.css">
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   
@@ -23,12 +24,12 @@
           <p>테스트 공유하기</p>
           <ul class="share-list">
             <li>
-              <button type="button">
+              <button type="button" onclick="kakaoShare()">
                 <img src="./img/kakaobtn.png" alt="카카오톡 공유 보내기 버튼" />
               </button>
             </li>
             <li>
-              <button type="button">
+              <button type="button" onclick="onClickCopyLink()">
                 <img src="./img/shareicon.png" alt="링크 공유 보내기 버튼" />
               </button>
             </li>
@@ -90,15 +91,15 @@
           </div>
           <button type="button" class="btn-restart">테스트 다시하기</button>
           <div class="result-share">
-            <p>내 결과 공유하기</p>
+            <p>테스트 공유하기</p>
             <ul class="result-share-list">
               <li>
-                <button type="button">
+                <button type="button" onclick="kakaoShare()">
                   <img src="./img/kakaobtn.png" alt="카카오톡 공유 보내기 버튼" />
                 </button>
               </li>
               <li>
-                <button type="button">
+                <button type="button" onclick="onClickCopyLink()">
                   <img src="./img/shareicon.png" alt="링크 공유 보내기 버튼" />
                 </button>
               </li>
