@@ -1,7 +1,9 @@
 .qna {
   display: none;
   background-color: #FFE298;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px 0;
+  box-sizing: border-box;
 }
 
 .page {
@@ -11,51 +13,58 @@
 }
 
 .question h2 {
-  width: 400px;
+  max-width: 400px;
+  width: 90%;
   font-size: 18px;
-  padding: 100px 0;
-  line-height: 30px;
+  padding: 80px 0;
+  line-height: 1.6;
   margin: 0 auto;
 }
 
 .answers {
   text-align: center;
-  height: 220px;
   width: 100%;
+  margin: 0 auto 40px;
 }
 
-.answers li a {
+.answers li {
+  margin-bottom: 15px;
+}
+
+.answer-btn {
   display: flex;
-  align-items: center; 
-  justify-content: center; 
-  width: 400px;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  width: 90%;
   background: #fff;
   border-radius: 100px;
   color: #000;
   font-size: 14px;
-  margin: 10px auto;
-  padding: 12px 0;
+  margin: 0 auto;
+  padding: 12px 15px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.answer-btn:hover {
+  background-color: #f0f0f0;
 }
 
 @media (max-width: 767px) {
   .page {
     font-size: 10px;
-    padding-top: 50px;
-    font-style: italic;
+    padding-top: 30px;
   }
 
   .question h2 {
-    width: 280px;
-    font-size: 18px;
-    line-height: 26px;
-    padding: 80px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 60px 0;
   }
 
-  .answers li a {
-    width: 270px;
-    font-size: 11px;
-    margin: 10px auto;
-    padding: 8px 0;
+  .answer-btn {
+    font-size: 12px;
+    padding: 12px 12px 10px;
   }
 }

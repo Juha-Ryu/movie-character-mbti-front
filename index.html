@@ -7,47 +7,46 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/qna.css">
     <link rel="stylesheet" href="./styles/result.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-028TWENYCP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-028TWENYCP');
+    </script>
+    <!-- //Google Analytics -->
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-028TWENYCP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-028TWENYCP');
-  </script>
   
   <body>
     <div class="container">
+      <!-- 메인 페이지 -->
       <section class="main">
         <div class="title">
           <img src="./img/main.jpg" alt="메인 이미지">
-          <h1>나에게 어울리는 <p>영화 캐릭터는?</p></h1>
+          <h1>나에게 어울리는 <span>영화 캐릭터는?</span></h1>
         </div>
         <button type="button" class="btn-start">시작하기</button>
-        <p class="participants">참여자수<em class="participants-count">10</em>명</p>
+        <p class="participants">참여자수<span class="participants-count">10</span>명</p>
         <div class="share">
           <p>테스트 공유하기</p>
           <ul class="share-list">
             <li>
-              <button type="button" onclick="kakaoShare()">
-                <img src="./img/kakaobtn.png" alt="카카오톡 공유 보내기 버튼" />
-              </button>
+              <button type="button" onclick="kakaoShare()" class="btn-kakao">카카오 공유하기</button>
             </li>
             <li>
-              <button type="button" onclick="onClickCopyLink()">
-                <img src="./img/shareicon.png" alt="링크 공유 보내기 버튼" />
-              </button>
+              <button type="button" onclick="onClickCopyLink()" class="btn-link">링크 공유하기</button>
             </li>
           </ul>
         </div>
         <p class="contact">contact : zanggaru@gmail.com</p>
       </section>
+      <!-- //메인 페이지 -->
 
+      <!-- 테스트 페이지 -->
       <section class="qna">
         <input type="hidden" id="page" value="0" />
         <input type="hidden" id="E" value="0" />
@@ -64,18 +63,20 @@
         </div>
         <ul class="answers">
           <li>
-            <a href="javascript:select();" class="a">
+            <button type="button" class="answer-btn a" data-type="E">
               스탭 분들에게 먼저 다가가서 친해지자고 말을 건다.
-            </a>
+            </button>
           </li>
           <li>
-            <a href="javascript:select();" class="b">
+            <button type="button" class="answer-btn b" data-type="I">
               다가가고 싶지만 다들 바빠보여.. 눈치보여서 가만히 있는다.
-            </a>
+            </button>
           </li>
         </ul>
       </section>
+      <!-- //테스트 페이지 -->
 
+      <!-- 결과 페이지 -->
       <section class="result">
         <div class="loader">Loading...</div>
         <div class="result-contents">
@@ -105,19 +106,16 @@
             <p>테스트 공유하기</p>
             <ul class="result-share-list">
               <li>
-                <button type="button" onclick="kakaoShare()">
-                  <img src="./img/kakaobtn.png" alt="카카오톡 공유 보내기 버튼" />
-                </button>
+                <button type="button" onclick="kakaoShare()" class="btn-kakao">카카오 공유하기</button>
               </li>
               <li>
-                <button type="button" onclick="onClickCopyLink()">
-                  <img src="./img/shareicon.png" alt="링크 공유 보내기 버튼" />
-                </button>
+                <button type="button" onclick="onClickCopyLink()" class="btn-link">링크 공유하기</button>
               </li>
             </ul>
           </div>
         </div>
       </section>
+      <!-- //결과 페이지 -->
 
       <script src="./js/data.js"></script>
       <script src="./js/script.js"></script>

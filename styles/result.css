@@ -73,8 +73,11 @@ h3 {
 
 .result img {
   width: 90%;
-  height: 45%;
+  height: auto; 
+  max-height: 45vh;
+  object-fit: contain;
   margin: 25px auto;
+  display: block;
 }
 
 .result-box { margin: 0px 20px; font-size: 14px; }
@@ -148,10 +151,14 @@ h3 {
 
 .result-share-list li { display: inline-block; }
 
-.result-share-list li img {
+.result-share-list li + li button {
+  margin-left: 5px;
+}
+
+.result-share-list li button {
   width: 40px;
   height: 40px;
-  margin-right: 5px;
+  font-size: 0;
 }
 
 @media (max-width: 767px) {
